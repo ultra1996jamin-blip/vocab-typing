@@ -1,0 +1,15 @@
+# test screenshots and Python caches
+tools/shots/
+__pycache__/
+*.pyc
+# temporary audio while generating voice packs
+*.wav
+*.mp3
+# local model downloads
+.cache/
+kokoro-multi-lang-*/
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

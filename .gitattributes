@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Generated / base64 payloads: keep diffs readable
+index.html            linguist-generated -diff
+data/voices/*.json    linguist-generated -diff
