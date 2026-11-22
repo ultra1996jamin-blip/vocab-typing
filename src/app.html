@@ -272,7 +272,12 @@ textarea{width:100%;min-height:110px;resize:vertical}
 /* ================= data ================= */
 const BUILTIN = /*WORDS*/[];
 const VOICES = (window.WORD_AUDIO && window.WORD_AUDIO.voices) || [];
-const UNIT_OPTS = [['all','전체 (Unit 1~3)',[1,2,3]],['1','Unit 1',[1]],['2','Unit 2',[2]],['3','Unit 3',[3]],['my','내 단어',['my']],['allmy','전체 + 내 단어',[1,2,3,'my']]];
+// units come from data/words.json, so a new unit shows up after a rebuild with no code change
+const UNITS = [...new Set(BUILTIN.map(w => w.unit))].sort((a, b) => String(a).localeCompare(String(b), undefined, {numeric:true}));
+const UNIT_LABEL = u => /^\d+$/.test(String(u)) ? `Unit ${u}` : String(u);
+const UNIT_OPTS = [['all', UNITS.length > 1 ? `전체 (${UNIT_LABEL(UNITS[0])}~${String(UNITS[UNITS.length - 1])})` : '전체', UNITS]]
+  .concat(UNITS.map(u => [String(u), UNIT_LABEL(u), [u]]))
+  .concat([['my', '내 단어', ['my']], ['allmy', '전체 + 내 단어', UNITS.concat(['my'])]]);
 const LEVELS = [100,200,300,400,500,600,800,1000];
 
 /* ================= settings ================= */
@@ -364,7 +369,14 @@ function shuffle(a){ for(let i = a.length - 1; i > 0; i--){ const j = Math.floor
 /* ================= audio: built-in voice cache ================= */
 const clipCache = new Map(); // voice|word -> {state, el, dur}
 function currentVoice(){ return VOICES.find(v => v.id === S.voice) || null; }
-function clipRec(word){ const v = currentVoice(); return v ? v.words[keyOf(word)] : null; }
+function clipRec(word){
+  // selected voice first; if it lacks the word, borrow another built-in voice before falling back to browser TTS
+  if(S.voice === 'browser') return null;
+  const k = keyOf(word), v = currentVoice();
+  if(v && v.words[k]) return v.words[k];
+  for(const o of VOICES) if(o.words[k]) return o.words[k];
+  return null;
+}
 function setPitch(a){ a.preservesPitch = true; a.mozPreservesPitch = true; a.webkitPreservesPitch = true; }
 function prepare(word){
   const ck = S.voice + '|' + keyOf(word);

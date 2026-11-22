@@ -10,11 +10,9 @@ ROOT = Path(__file__).resolve().parent.parent
 VOICE_ORDER = ["heart", "michael", "supertonic"]  # first one is the default voice
 
 words = json.loads((ROOT / "data/words.json").read_text(encoding="utf-8"))
-voices = []
-for vid in VOICE_ORDER:
-    f = ROOT / "data/voices" / f"{vid}.json"
-    if f.exists():
-        voices.append(json.loads(f.read_text(encoding="utf-8")))
+packs = {f.stem: f for f in (ROOT / "data/voices").glob("*.json")}
+order = [v for v in VOICE_ORDER if v in packs] + sorted(v for v in packs if v not in VOICE_ORDER)
+voices = [json.loads(packs[v].read_text(encoding="utf-8")) for v in order]
 
 src = (ROOT / "src/app.html").read_text(encoding="utf-8")
 assert "/*WORDS*/[]" in src and '/*AUDIO*/{"voices":[]}' in src, "placeholders missing in src/app.html"
@@ -22,7 +20,11 @@ out = src.replace("/*WORDS*/[]", json.dumps(words, ensure_ascii=False, separator
 out = out.replace('/*AUDIO*/{"voices":[]}', json.dumps({"voices": voices}, ensure_ascii=False, separators=(",", ":")))
 (ROOT / "index.html").write_text(out, encoding="utf-8")
 
-missing = [w["en"] for w in words for v in voices if w["en"].lower() not in v["words"]]
 print(f"index.html {len(out.encode('utf-8')):,} bytes · {len(words)} words · voices: {[v['id'] for v in voices]}")
-if missing:
-    print("WARNING: words without built-in audio (browser TTS will be used):", sorted(set(missing)))
+for v in voices:
+    miss = [w["en"] for w in words if w["en"].lower() not in v["words"]]
+    if miss:
+        print(f"note: voice '{v['id']}' lacks {len(miss)} words; the app borrows another built-in voice for them")
+nowhere = [w["en"] for w in words if not any(w["en"].lower() in v["words"] for v in voices)]
+if nowhere:
+    print("WARNING: no built-in audio at all (browser TTS will be used):", nowhere)
