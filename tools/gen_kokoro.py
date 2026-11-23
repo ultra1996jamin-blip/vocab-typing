@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Make or update Kokoro v1.0 voice packs (US English, offline) for the words in data/words.json.
 
-By default only words missing from data/voices/<voice>.json are generated and merged in.
+By default only words missing from data/audio/manifest.json are generated; mp3 files go to data/audio/<voice>/.
 
 usage:
     python tools/gen_kokoro.py heart michael            # add audio for new words
@@ -11,12 +11,14 @@ usage:
 needs: pip install sherpa-onnx numpy soundfile   and ffmpeg on PATH.
 model: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2
        unpacked into KOKORO_DIR (default ~/.cache/kokoro/kokoro-multi-lang-v1_0)
-pack format: {"id", "label", "words": {word_lowercase: {"d": seconds, "b64": mp3 base64}}}
+output: data/audio/<voice>/<word>.mp3 + data/audio/manifest.json (see tools/audiolib.py)
 """
-import argparse, base64, json, os, subprocess, sys, tarfile, tempfile, time, urllib.request
+import argparse, json, os, subprocess, sys, tarfile, tempfile, time, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import audiolib
 MODEL_URL = "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2"
 D = Path(os.environ.get("KOKORO_DIR", Path.home() / ".cache/kokoro/kokoro-multi-lang-v1_0"))
 PRESETS = {  # voice id -> (Kokoro speaker id, label shown in the app)
@@ -82,28 +84,28 @@ def main():
     so, tts = load_tts()
 
     words = [w["en"] for w in json.loads((ROOT / "data/words.json").read_text(encoding="utf-8"))]
+    manifest = audiolib.load()
     for vid in a.voices:
         sid, label = PRESETS[vid]
-        f = ROOT / "data/voices" / f"{vid}.json"
-        pack = json.loads(f.read_text(encoding="utf-8")) if f.exists() and not a.all else {"words": {}}
-        pack.update({"id": vid, "label": label})
-        todo = [w for w in dict.fromkeys(words) if w.lower() not in pack["words"]]
+        v = audiolib.voice(manifest, vid, label)
+        if a.all:
+            v["words"] = {}
+        todo = [w for w in dict.fromkeys(words) if w.lower() not in v["words"] or not (ROOT / v["words"][w.lower()]["f"]).exists()]
         t0 = time.time()
         with tempfile.TemporaryDirectory() as td:
             for w in todo:
                 au = synth(so, tts, w + ".", sid, a.speed)
                 x = trim(np, np.asarray(au.samples, dtype=np.float32), au.sample_rate)
                 x = x * (0.89 / (float(np.abs(x).max()) or 1.0))
-                wav, mp3 = Path(td) / "w.wav", Path(td) / "w.mp3"
+                wav, out = Path(td) / "w.wav", audiolib.mp3_path(vid, w)
+                out.parent.mkdir(parents=True, exist_ok=True)
                 sf.write(wav, x, au.sample_rate)
                 subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(wav), "-ac", "1", "-ar", "24000",
-                                "-b:a", "48k", str(mp3)], check=True)
-                pack["words"][w.lower()] = {"d": round(len(x) / au.sample_rate, 3), "b64": base64.b64encode(mp3.read_bytes()).decode()}
-                print(f"  {vid}: {w:14s} {pack['words'][w.lower()]['d']:.2f}s", file=sys.stderr, flush=True)
-        f.parent.mkdir(parents=True, exist_ok=True)
-        f.write_text(json.dumps({"id": vid, "label": label, "words": pack["words"]}, ensure_ascii=False, separators=(",", ":")),
-                     encoding="utf-8")
-        print(f"{vid}: +{len(todo)} generated in {time.time() - t0:.1f}s, {len(pack['words'])} words in pack")
+                                "-b:a", "48k", str(out)], check=True)
+                v["words"][w.lower()] = {"d": round(len(x) / au.sample_rate, 3), "f": str(out.relative_to(ROOT))}
+                print(f"  {vid}: {w:14s} {v['words'][w.lower()]['d']:.2f}s", file=sys.stderr, flush=True)
+        audiolib.save(manifest)   # save after every voice so an interrupted run keeps its work
+        print(f"{vid}: +{len(todo)} generated in {time.time() - t0:.1f}s, {len(v['words'])} words in voice")
 
 
 if __name__ == "__main__":

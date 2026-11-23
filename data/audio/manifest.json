@@ -1,0 +1,742 @@
+{
+ "voices": [
+  {
+   "id": "heart",
+   "label": "여자 · Heart (Kokoro, 추천)",
+   "words": {
+    "bottle": {
+     "d": 0.644,
+     "f": "data/audio/heart/bottle.mp3"
+    },
+    "bowl": {
+     "d": 0.587,
+     "f": "data/audio/heart/bowl.mp3"
+    },
+    "cheese": {
+     "d": 0.652,
+     "f": "data/audio/heart/cheese.mp3"
+    },
+    "dishes": {
+     "d": 0.704,
+     "f": "data/audio/heart/dishes.mp3"
+    },
+    "fork": {
+     "d": 0.606,
+     "f": "data/audio/heart/fork.mp3"
+    },
+    "huge": {
+     "d": 0.659,
+     "f": "data/audio/heart/huge.mp3"
+    },
+    "ice cream": {
+     "d": 0.791,
+     "f": "data/audio/heart/ice-cream.mp3"
+    },
+    "knife": {
+     "d": 0.582,
+     "f": "data/audio/heart/knife.mp3"
+    },
+    "meal": {
+     "d": 0.568,
+     "f": "data/audio/heart/meal.mp3"
+    },
+    "spoon": {
+     "d": 0.676,
+     "f": "data/audio/heart/spoon.mp3"
+    },
+    "alarm": {
+     "d": 0.631,
+     "f": "data/audio/heart/alarm.mp3"
+    },
+    "asleep": {
+     "d": 0.66,
+     "f": "data/audio/heart/asleep.mp3"
+    },
+    "cloud": {
+     "d": 0.608,
+     "f": "data/audio/heart/cloud.mp3"
+    },
+    "mad": {
+     "d": 0.607,
+     "f": "data/audio/heart/mad.mp3"
+    },
+    "nurse": {
+     "d": 0.646,
+     "f": "data/audio/heart/nurse.mp3"
+    },
+    "pool": {
+     "d": 0.619,
+     "f": "data/audio/heart/pool.mp3"
+    },
+    "rainbow": {
+     "d": 0.736,
+     "f": "data/audio/heart/rainbow.mp3"
+    },
+    "sand": {
+     "d": 0.618,
+     "f": "data/audio/heart/sand.mp3"
+    },
+    "storm": {
+     "d": 0.633,
+     "f": "data/audio/heart/storm.mp3"
+    },
+    "wake up": {
+     "d": 0.695,
+     "f": "data/audio/heart/wake-up.mp3"
+    },
+    "brush": {
+     "d": 0.617,
+     "f": "data/audio/heart/brush.mp3"
+    },
+    "daughter": {
+     "d": 0.642,
+     "f": "data/audio/heart/daughter.mp3"
+    },
+    "neighbor": {
+     "d": 0.661,
+     "f": "data/audio/heart/neighbor.mp3"
+    },
+    "ocean": {
+     "d": 0.651,
+     "f": "data/audio/heart/ocean.mp3"
+    },
+    "photograph": {
+     "d": 0.815,
+     "f": "data/audio/heart/photograph.mp3"
+    },
+    "pocket": {
+     "d": 0.7,
+     "f": "data/audio/heart/pocket.mp3"
+    },
+    "smart": {
+     "d": 0.662,
+     "f": "data/audio/heart/smart.mp3"
+    },
+    "son": {
+     "d": 0.576,
+     "f": "data/audio/heart/son.mp3"
+    },
+    "square": {
+     "d": 0.636,
+     "f": "data/audio/heart/square.mp3"
+    },
+    "thumb": {
+     "d": 0.561,
+     "f": "data/audio/heart/thumb.mp3"
+    },
+    "amazing": {
+     "d": 0.781,
+     "f": "data/audio/heart/amazing.mp3"
+    },
+    "bug": {
+     "d": 0.573,
+     "f": "data/audio/heart/bug.mp3"
+    },
+    "can": {
+     "d": 0.552,
+     "f": "data/audio/heart/can.mp3"
+    },
+    "chip": {
+     "d": 0.549,
+     "f": "data/audio/heart/chip.mp3"
+    },
+    "drum": {
+     "d": 0.609,
+     "f": "data/audio/heart/drum.mp3"
+    },
+    "soccer": {
+     "d": 0.67,
+     "f": "data/audio/heart/soccer.mp3"
+    },
+    "theater": {
+     "d": 0.65,
+     "f": "data/audio/heart/theater.mp3"
+    },
+    "ticket": {
+     "d": 0.669,
+     "f": "data/audio/heart/ticket.mp3"
+    },
+    "tiny": {
+     "d": 0.606,
+     "f": "data/audio/heart/tiny.mp3"
+    },
+    "wing": {
+     "d": 0.552,
+     "f": "data/audio/heart/wing.mp3"
+    },
+    "bath": {
+     "d": 0.589,
+     "f": "data/audio/heart/bath.mp3"
+    },
+    "born": {
+     "d": 0.623,
+     "f": "data/audio/heart/born.mp3"
+    },
+    "chase": {
+     "d": 0.647,
+     "f": "data/audio/heart/chase.mp3"
+    },
+    "date": {
+     "d": 0.564,
+     "f": "data/audio/heart/date.mp3"
+    },
+    "feather": {
+     "d": 0.59,
+     "f": "data/audio/heart/feather.mp3"
+    },
+    "gift": {
+     "d": 0.6,
+     "f": "data/audio/heart/gift.mp3"
+    },
+    "lock": {
+     "d": 0.609,
+     "f": "data/audio/heart/lock.mp3"
+    },
+    "magazine": {
+     "d": 0.836,
+     "f": "data/audio/heart/magazine.mp3"
+    },
+    "skin": {
+     "d": 0.641,
+     "f": "data/audio/heart/skin.mp3"
+    },
+    "yard": {
+     "d": 0.588,
+     "f": "data/audio/heart/yard.mp3"
+    },
+    "adult": {
+     "d": 0.653,
+     "f": "data/audio/heart/adult.mp3"
+    },
+    "giant": {
+     "d": 0.621,
+     "f": "data/audio/heart/giant.mp3"
+    },
+    "lazy": {
+     "d": 0.675,
+     "f": "data/audio/heart/lazy.mp3"
+    },
+    "menu": {
+     "d": 0.641,
+     "f": "data/audio/heart/menu.mp3"
+    },
+    "planet": {
+     "d": 0.65,
+     "f": "data/audio/heart/planet.mp3"
+    },
+    "rice": {
+     "d": 0.621,
+     "f": "data/audio/heart/rice.mp3"
+    },
+    "salad": {
+     "d": 0.611,
+     "f": "data/audio/heart/salad.mp3"
+    },
+    "salt": {
+     "d": 0.623,
+     "f": "data/audio/heart/salt.mp3"
+    },
+    "serve": {
+     "d": 0.645,
+     "f": "data/audio/heart/serve.mp3"
+    },
+    "soup": {
+     "d": 0.594,
+     "f": "data/audio/heart/soup.mp3"
+    }
+   }
+  },
+  {
+   "id": "michael",
+   "label": "남자 · Michael (Kokoro)",
+   "words": {
+    "bottle": {
+     "d": 0.699,
+     "f": "data/audio/michael/bottle.mp3"
+    },
+    "bowl": {
+     "d": 0.646,
+     "f": "data/audio/michael/bowl.mp3"
+    },
+    "cheese": {
+     "d": 0.699,
+     "f": "data/audio/michael/cheese.mp3"
+    },
+    "dishes": {
+     "d": 0.802,
+     "f": "data/audio/michael/dishes.mp3"
+    },
+    "fork": {
+     "d": 0.698,
+     "f": "data/audio/michael/fork.mp3"
+    },
+    "huge": {
+     "d": 0.679,
+     "f": "data/audio/michael/huge.mp3"
+    },
+    "ice cream": {
+     "d": 0.945,
+     "f": "data/audio/michael/ice-cream.mp3"
+    },
+    "knife": {
+     "d": 0.695,
+     "f": "data/audio/michael/knife.mp3"
+    },
+    "meal": {
+     "d": 0.647,
+     "f": "data/audio/michael/meal.mp3"
+    },
+    "spoon": {
+     "d": 0.767,
+     "f": "data/audio/michael/spoon.mp3"
+    },
+    "alarm": {
+     "d": 0.73,
+     "f": "data/audio/michael/alarm.mp3"
+    },
+    "asleep": {
+     "d": 0.766,
+     "f": "data/audio/michael/asleep.mp3"
+    },
+    "cloud": {
+     "d": 0.67,
+     "f": "data/audio/michael/cloud.mp3"
+    },
+    "mad": {
+     "d": 0.674,
+     "f": "data/audio/michael/mad.mp3"
+    },
+    "nurse": {
+     "d": 0.715,
+     "f": "data/audio/michael/nurse.mp3"
+    },
+    "pool": {
+     "d": 0.626,
+     "f": "data/audio/michael/pool.mp3"
+    },
+    "rainbow": {
+     "d": 0.802,
+     "f": "data/audio/michael/rainbow.mp3"
+    },
+    "sand": {
+     "d": 0.73,
+     "f": "data/audio/michael/sand.mp3"
+    },
+    "storm": {
+     "d": 0.73,
+     "f": "data/audio/michael/storm.mp3"
+    },
+    "wake up": {
+     "d": 0.786,
+     "f": "data/audio/michael/wake-up.mp3"
+    },
+    "brush": {
+     "d": 0.704,
+     "f": "data/audio/michael/brush.mp3"
+    },
+    "daughter": {
+     "d": 0.689,
+     "f": "data/audio/michael/daughter.mp3"
+    },
+    "neighbor": {
+     "d": 0.726,
+     "f": "data/audio/michael/neighbor.mp3"
+    },
+    "ocean": {
+     "d": 0.714,
+     "f": "data/audio/michael/ocean.mp3"
+    },
+    "photograph": {
+     "d": 0.964,
+     "f": "data/audio/michael/photograph.mp3"
+    },
+    "pocket": {
+     "d": 0.765,
+     "f": "data/audio/michael/pocket.mp3"
+    },
+    "smart": {
+     "d": 0.715,
+     "f": "data/audio/michael/smart.mp3"
+    },
+    "son": {
+     "d": 0.646,
+     "f": "data/audio/michael/son.mp3"
+    },
+    "square": {
+     "d": 0.702,
+     "f": "data/audio/michael/square.mp3"
+    },
+    "thumb": {
+     "d": 0.655,
+     "f": "data/audio/michael/thumb.mp3"
+    },
+    "amazing": {
+     "d": 0.857,
+     "f": "data/audio/michael/amazing.mp3"
+    },
+    "bug": {
+     "d": 0.643,
+     "f": "data/audio/michael/bug.mp3"
+    },
+    "can": {
+     "d": 0.585,
+     "f": "data/audio/michael/can.mp3"
+    },
+    "chip": {
+     "d": 0.628,
+     "f": "data/audio/michael/chip.mp3"
+    },
+    "drum": {
+     "d": 0.683,
+     "f": "data/audio/michael/drum.mp3"
+    },
+    "soccer": {
+     "d": 0.775,
+     "f": "data/audio/michael/soccer.mp3"
+    },
+    "theater": {
+     "d": 0.763,
+     "f": "data/audio/michael/theater.mp3"
+    },
+    "ticket": {
+     "d": 0.668,
+     "f": "data/audio/michael/ticket.mp3"
+    },
+    "tiny": {
+     "d": 0.677,
+     "f": "data/audio/michael/tiny.mp3"
+    },
+    "wing": {
+     "d": 0.639,
+     "f": "data/audio/michael/wing.mp3"
+    },
+    "bath": {
+     "d": 0.622,
+     "f": "data/audio/michael/bath.mp3"
+    },
+    "born": {
+     "d": 0.698,
+     "f": "data/audio/michael/born.mp3"
+    },
+    "chase": {
+     "d": 0.69,
+     "f": "data/audio/michael/chase.mp3"
+    },
+    "date": {
+     "d": 0.63,
+     "f": "data/audio/michael/date.mp3"
+    },
+    "feather": {
+     "d": 0.692,
+     "f": "data/audio/michael/feather.mp3"
+    },
+    "gift": {
+     "d": 0.676,
+     "f": "data/audio/michael/gift.mp3"
+    },
+    "lock": {
+     "d": 0.684,
+     "f": "data/audio/michael/lock.mp3"
+    },
+    "magazine": {
+     "d": 0.919,
+     "f": "data/audio/michael/magazine.mp3"
+    },
+    "skin": {
+     "d": 0.718,
+     "f": "data/audio/michael/skin.mp3"
+    },
+    "yard": {
+     "d": 0.666,
+     "f": "data/audio/michael/yard.mp3"
+    },
+    "adult": {
+     "d": 0.733,
+     "f": "data/audio/michael/adult.mp3"
+    },
+    "giant": {
+     "d": 0.729,
+     "f": "data/audio/michael/giant.mp3"
+    },
+    "lazy": {
+     "d": 0.78,
+     "f": "data/audio/michael/lazy.mp3"
+    },
+    "menu": {
+     "d": 0.746,
+     "f": "data/audio/michael/menu.mp3"
+    },
+    "planet": {
+     "d": 0.715,
+     "f": "data/audio/michael/planet.mp3"
+    },
+    "rice": {
+     "d": 0.686,
+     "f": "data/audio/michael/rice.mp3"
+    },
+    "salad": {
+     "d": 0.758,
+     "f": "data/audio/michael/salad.mp3"
+    },
+    "salt": {
+     "d": 0.668,
+     "f": "data/audio/michael/salt.mp3"
+    },
+    "serve": {
+     "d": 0.732,
+     "f": "data/audio/michael/serve.mp3"
+    },
+    "soup": {
+     "d": 0.678,
+     "f": "data/audio/michael/soup.mp3"
+    }
+   }
+  },
+  {
+   "id": "supertonic",
+   "label": "여자 · Supertonic (이전 목소리)",
+   "words": {
+    "bottle": {
+     "d": 0.631,
+     "f": "data/audio/supertonic/bottle.mp3"
+    },
+    "bowl": {
+     "d": 0.582,
+     "f": "data/audio/supertonic/bowl.mp3"
+    },
+    "cheese": {
+     "d": 0.714,
+     "f": "data/audio/supertonic/cheese.mp3"
+    },
+    "dishes": {
+     "d": 0.838,
+     "f": "data/audio/supertonic/dishes.mp3"
+    },
+    "fork": {
+     "d": 0.588,
+     "f": "data/audio/supertonic/fork.mp3"
+    },
+    "huge": {
+     "d": 0.793,
+     "f": "data/audio/supertonic/huge.mp3"
+    },
+    "ice cream": {
+     "d": 0.797,
+     "f": "data/audio/supertonic/ice-cream.mp3"
+    },
+    "knife": {
+     "d": 0.577,
+     "f": "data/audio/supertonic/knife.mp3"
+    },
+    "meal": {
+     "d": 0.606,
+     "f": "data/audio/supertonic/meal.mp3"
+    },
+    "spoon": {
+     "d": 0.78,
+     "f": "data/audio/supertonic/spoon.mp3"
+    },
+    "alarm": {
+     "d": 0.699,
+     "f": "data/audio/supertonic/alarm.mp3"
+    },
+    "asleep": {
+     "d": 0.629,
+     "f": "data/audio/supertonic/asleep.mp3"
+    },
+    "cloud": {
+     "d": 0.571,
+     "f": "data/audio/supertonic/cloud.mp3"
+    },
+    "mad": {
+     "d": 0.508,
+     "f": "data/audio/supertonic/mad.mp3"
+    },
+    "nurse": {
+     "d": 0.765,
+     "f": "data/audio/supertonic/nurse.mp3"
+    },
+    "pool": {
+     "d": 0.703,
+     "f": "data/audio/supertonic/pool.mp3"
+    },
+    "rainbow": {
+     "d": 0.714,
+     "f": "data/audio/supertonic/rainbow.mp3"
+    },
+    "sand": {
+     "d": 0.763,
+     "f": "data/audio/supertonic/sand.mp3"
+    },
+    "storm": {
+     "d": 0.677,
+     "f": "data/audio/supertonic/storm.mp3"
+    },
+    "wake up": {
+     "d": 0.698,
+     "f": "data/audio/supertonic/wake-up.mp3"
+    },
+    "brush": {
+     "d": 0.716,
+     "f": "data/audio/supertonic/brush.mp3"
+    },
+    "daughter": {
+     "d": 0.742,
+     "f": "data/audio/supertonic/daughter.mp3"
+    },
+    "neighbor": {
+     "d": 0.646,
+     "f": "data/audio/supertonic/neighbor.mp3"
+    },
+    "ocean": {
+     "d": 0.816,
+     "f": "data/audio/supertonic/ocean.mp3"
+    },
+    "photograph": {
+     "d": 0.956,
+     "f": "data/audio/supertonic/photograph.mp3"
+    },
+    "pocket": {
+     "d": 0.821,
+     "f": "data/audio/supertonic/pocket.mp3"
+    },
+    "smart": {
+     "d": 0.805,
+     "f": "data/audio/supertonic/smart.mp3"
+    },
+    "son": {
+     "d": 0.765,
+     "f": "data/audio/supertonic/son.mp3"
+    },
+    "square": {
+     "d": 0.689,
+     "f": "data/audio/supertonic/square.mp3"
+    },
+    "thumb": {
+     "d": 0.595,
+     "f": "data/audio/supertonic/thumb.mp3"
+    },
+    "amazing": {
+     "d": 0.74,
+     "f": "data/audio/supertonic/amazing.mp3"
+    },
+    "bug": {
+     "d": 0.722,
+     "f": "data/audio/supertonic/bug.mp3"
+    },
+    "can": {
+     "d": 0.614,
+     "f": "data/audio/supertonic/can.mp3"
+    },
+    "chip": {
+     "d": 0.519,
+     "f": "data/audio/supertonic/chip.mp3"
+    },
+    "drum": {
+     "d": 0.542,
+     "f": "data/audio/supertonic/drum.mp3"
+    },
+    "soccer": {
+     "d": 0.857,
+     "f": "data/audio/supertonic/soccer.mp3"
+    },
+    "theater": {
+     "d": 0.67,
+     "f": "data/audio/supertonic/theater.mp3"
+    },
+    "ticket": {
+     "d": 0.594,
+     "f": "data/audio/supertonic/ticket.mp3"
+    },
+    "tiny": {
+     "d": 0.682,
+     "f": "data/audio/supertonic/tiny.mp3"
+    },
+    "wing": {
+     "d": 0.491,
+     "f": "data/audio/supertonic/wing.mp3"
+    },
+    "bath": {
+     "d": 0.595,
+     "f": "data/audio/supertonic/bath.mp3"
+    },
+    "born": {
+     "d": 0.678,
+     "f": "data/audio/supertonic/born.mp3"
+    },
+    "chase": {
+     "d": 0.746,
+     "f": "data/audio/supertonic/chase.mp3"
+    },
+    "date": {
+     "d": 0.606,
+     "f": "data/audio/supertonic/date.mp3"
+    },
+    "feather": {
+     "d": 0.618,
+     "f": "data/audio/supertonic/feather.mp3"
+    },
+    "gift": {
+     "d": 0.548,
+     "f": "data/audio/supertonic/gift.mp3"
+    },
+    "lock": {
+     "d": 0.642,
+     "f": "data/audio/supertonic/lock.mp3"
+    },
+    "magazine": {
+     "d": 0.787,
+     "f": "data/audio/supertonic/magazine.mp3"
+    },
+    "skin": {
+     "d": 0.71,
+     "f": "data/audio/supertonic/skin.mp3"
+    },
+    "yard": {
+     "d": 0.501,
+     "f": "data/audio/supertonic/yard.mp3"
+    },
+    "adult": {
+     "d": 0.697,
+     "f": "data/audio/supertonic/adult.mp3"
+    },
+    "giant": {
+     "d": 0.814,
+     "f": "data/audio/supertonic/giant.mp3"
+    },
+    "lazy": {
+     "d": 0.693,
+     "f": "data/audio/supertonic/lazy.mp3"
+    },
+    "menu": {
+     "d": 0.797,
+     "f": "data/audio/supertonic/menu.mp3"
+    },
+    "planet": {
+     "d": 0.525,
+     "f": "data/audio/supertonic/planet.mp3"
+    },
+    "rice": {
+     "d": 0.663,
+     "f": "data/audio/supertonic/rice.mp3"
+    },
+    "salad": {
+     "d": 0.67,
+     "f": "data/audio/supertonic/salad.mp3"
+    },
+    "salt": {
+     "d": 0.595,
+     "f": "data/audio/supertonic/salt.mp3"
+    },
+    "serve": {
+     "d": 0.816,
+     "f": "data/audio/supertonic/serve.mp3"
+    },
+    "soup": {
+     "d": 0.581,
+     "f": "data/audio/supertonic/soup.mp3"
+    }
+   }
+  }
+ ]
+}

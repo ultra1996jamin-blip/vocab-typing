@@ -7,7 +7,10 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
-URL = (ROOT / 'index.html').as_uri()
+import http.server, threading, functools
+srv = http.server.ThreadingHTTPServer(('127.0.0.1', 0), functools.partial(type('Q', (http.server.SimpleHTTPRequestHandler,), {'log_message': lambda *a: None}), directory=str(ROOT)))
+threading.Thread(target=srv.serve_forever, daemon=True).start()
+URL = f'http://127.0.0.1:{srv.server_port}/index.html'
 shots = ROOT / 'tools' / 'shots'; shots.mkdir(exist_ok=True)
 errors = []
 ev = lambda page, js: page.evaluate(js)

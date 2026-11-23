@@ -118,15 +118,15 @@ def main():
     text = "[\n" + ",\n".join(json.dumps({f: w.get(f, "") for f in FIELDS}, ensure_ascii=False) for w in merged) + "\n]\n"
     WORDS.write_text(text, encoding="utf-8")
     missing = {}
-    for vf in sorted((ROOT / "data/voices").glob("*.json")):
-        pack = json.loads(vf.read_text(encoding="utf-8"))["words"]
-        miss = [w["en"] for w in merged if w["en"].lower() not in pack]
+    mf = ROOT / "data/audio/manifest.json"
+    for v in (json.loads(mf.read_text(encoding="utf-8"))["voices"] if mf.exists() else []):
+        miss = [w["en"] for w in merged if w["en"].lower() not in v["words"]]
         if miss:
-            missing[vf.stem] = miss
+            missing[v["id"]] = miss
     for vid, miss in missing.items():
         print(f"voice {vid}: {len(miss)} words without audio" + (f" e.g. {miss[:5]}" if miss else ""))
     if missing:
-        print("next: python tools/gen_kokoro.py heart michael   (then python tools/build.py)")
+        print("next: python tools/gen_kokoro.py heart michael   (then just reload the app, no build)")
 
 
 if __name__ == "__main__":

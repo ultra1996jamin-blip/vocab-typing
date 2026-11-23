@@ -2,9 +2,10 @@
 tools/shots/
 __pycache__/
 *.pyc
-# temporary audio while generating voice packs
+# temporary audio while generating (the app's mp3 files in data/audio/ ARE tracked)
 *.wav
-*.mp3
+/*.mp3
+dist/
 # local model downloads
 .cache/
 kokoro-multi-lang-*/
