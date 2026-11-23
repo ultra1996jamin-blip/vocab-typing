@@ -1,0 +1,907 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="claude" version="24.0.0">
+  <diagram name="1. DFD Level 0 (컨텍스트)" id="pg_52568023">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;font style='font-size:16px'&gt;&lt;b&gt;영단어 타자 연습 시스템 — DFD Level 0 (컨텍스트 다이어그램)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="5" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="운영자&lt;br&gt;&lt;font style='font-size:11px;font-weight:normal'&gt;(박진구 · 단어장 제공)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" value="학습자&lt;br&gt;&lt;font style='font-size:11px;font-weight:normal'&gt;(타자 연습 사용자)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="330" width="150" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="GitHub&lt;br&gt;&lt;font style='font-size:11px;font-weight:normal'&gt;저장소 + Pages(정적 호스팅)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="205" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" value="&lt;b&gt;0&lt;/b&gt;&lt;hr&gt;영단어 타자 연습 시스템&lt;br&gt;&lt;font style='font-size:11px'&gt;제작 도구(Claude 작업 환경)&lt;br&gt;+ 웹앱(학습자 브라우저)&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="470" y="60" width="300" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" value="※ 음성(MP3)은 &lt;b&gt;Claude가 제작 환경에서 Kokoro TTS로 미리 생성&lt;/b&gt;해 저장소에 올려요.&lt;br&gt;학습자 브라우저는 음성을 &lt;b&gt;재생만&lt;/b&gt; 하고, 서버 측 로직·DB는 없어요 (정적 파일만)." style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff9c4;strokeColor=#bfae3c;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="400" width="430" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" value="&lt;b&gt;범례 (Legend)&lt;/b&gt;" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9aa0a6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="20" y="560" width="1210" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" value="외부 엔티티" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="594" width="110" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" value="프로세스" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="594" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" value="&lt;font color=&quot;#1a73e8&quot;&gt;&lt;b&gt;HTTPS&lt;/b&gt;&lt;/font&gt; — HTTPS (웹 · 채팅)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="630" width="475" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" value="&lt;font color=&quot;#188038&quot;&gt;&lt;b&gt;Git/HTTPS&lt;/b&gt;&lt;/font&gt; — Git over HTTPS (push)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="745" y="630" width="475" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" value="&lt;font color=&quot;#e8710a&quot;&gt;&lt;b&gt;키보드(HID)&lt;/b&gt;&lt;/font&gt; — 키보드 입력 (USB HID → keydown)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="660" width="475" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" value="&lt;font color=&quot;#00897b&quot;&gt;&lt;b&gt;화면(DOM)&lt;/b&gt;&lt;/font&gt; — 화면 렌더링 (DOM/CSS)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="745" y="660" width="475" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" value="&lt;font color=&quot;#9334e6&quot;&gt;&lt;b&gt;오디오(스피커)&lt;/b&gt;&lt;/font&gt; — 오디오 출력 (HTMLAudio → 스피커)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="690" width="475" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" value="화살표 머리(▶)가 가리키는 쪽이 &lt;b&gt;데이터가 흐르는 방향&lt;/b&gt;이에요. 색·선 모양은 &lt;b&gt;프로토콜/인터페이스&lt;/b&gt;를 뜻해요." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="40" y="722" width="1170" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;단어장 사진 · 단원 번호 · 추가 요청" edge="1" parent="1" source="n3" target="n6" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.0000;exitY=0.2500;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.0761;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;엑셀 단어장 · 처리 결과 보고" edge="1" parent="1" source="n6" target="n3" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.0000;exitY=0.2283;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.7500;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="&lt;b&gt;[키보드(HID)]&lt;/b&gt;&lt;br&gt;타이핑 · 단축키(Enter/Tab/Esc) · 설정 조작" edge="1" parent="1" source="n4" target="n6" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.0000;exitY=0.2105;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.6739;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="&lt;b&gt;[화면(DOM)]&lt;/b&gt;&lt;br&gt;단어 · 뜻 · 키 안내 · 타수/정확도" edge="1" parent="1" source="n6" target="n4" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.0000;exitY=0.8043;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5263;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="&lt;b&gt;[오디오(스피커)]&lt;/b&gt;&lt;br&gt;원어민 발음 1회 (속도 자동 맞춤)" edge="1" parent="1" source="n6" target="n4" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;exitX=0.0000;exitY=0.9239;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.8158;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="&lt;b&gt;[Git/HTTPS]&lt;/b&gt;&lt;br&gt;git push · 앱 코드 · 단어(JSON) · 음성(MP3)" edge="1" parent="1" source="n6" target="n5" style="endArrow=block;endFill=1;html=1;strokeColor=#188038;strokeWidth=2;fontColor=#188038;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.0000;exitY=0.4022;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3077;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;HTTPS GET · index.html · words.json · manifest · mp3" edge="1" parent="1" source="n5" target="n6" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.0000;exitY=0.7692;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5326;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="642" as="sourcePoint" />
+            <mxPoint x="130" y="642" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#188038;strokeWidth=2;fontColor=#188038;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="642" as="sourcePoint" />
+            <mxPoint x="735" y="642" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="672" as="sourcePoint" />
+            <mxPoint x="130" y="672" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="672" as="sourcePoint" />
+            <mxPoint x="735" y="672" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="702" as="sourcePoint" />
+            <mxPoint x="130" y="702" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. DFD Level 1" id="pg_66257058">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1760" pageHeight="1320" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;font style='font-size:16px'&gt;&lt;b&gt;영단어 타자 연습 시스템 — DFD Level 1 (프로세스 분해)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="5" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="제작 환경 — Claude 클라우드 워크스페이스 (단어 추가 때만 실행)" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#9aa0a6;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="230" y="50" width="720" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" value="실행 환경 — 학습자 브라우저 (정적 웹앱)" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#9aa0a6;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="50" width="520" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="운영자" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="150" width="150" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" value="학습자" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="440" width="150" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" value="GitHub&lt;br&gt;&lt;font style='font-size:11px;font-weight:normal'&gt;저장소 + Pages&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="960" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" value="&lt;b&gt;1.1&lt;/b&gt;&lt;hr&gt;사진에서 단어 추출&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;Claude 비전 → TSV&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="100" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" value="&lt;b&gt;1.2&lt;/b&gt;&lt;hr&gt;단어 검증 · 병합&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;add_words.py&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="250" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" value="&lt;b&gt;1.3&lt;/b&gt;&lt;hr&gt;음성 생성&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;gen_kokoro.py · Kokoro TTS + ffmpeg&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="400" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" value="&lt;b&gt;1.4&lt;/b&gt;&lt;hr&gt;엑셀 단어장 생성&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;make_wordbook.py&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="550" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" value="&lt;b&gt;1.5&lt;/b&gt;&lt;hr&gt;저장소 반영 · 배포&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;git commit/push → Pages&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="700" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" value="&lt;b&gt;D1&lt;/b&gt; | data/words.json" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="265" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" value="&lt;b&gt;D1&lt;/b&gt; | words.json &lt;font style='font-size:10px'&gt;(참조)&lt;/font&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="395" width="230" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" value="&lt;b&gt;D2&lt;/b&gt; | data/audio/*.mp3 + manifest.json" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="445" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" value="&lt;b&gt;D1&lt;/b&gt; | words.json &lt;font style='font-size:10px'&gt;(참조)&lt;/font&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="550" width="230" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" value="&lt;b&gt;D3&lt;/b&gt; | wordbook/*.xlsx" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="595" width="230" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" value="&lt;b&gt;1.6&lt;/b&gt;&lt;hr&gt;데이터 로딩 · 음성 미리 캐시&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;fetch · Blob · 미리 로딩(기본 5개)&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="130" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" value="&lt;b&gt;1.7&lt;/b&gt;&lt;hr&gt;타자 연습 진행&lt;br&gt;&lt;font style='font-size:10px;color:#555'&gt;입력 판정 · 타수 계산 · 발화 속도 맞춤&lt;/font&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="450" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" value="&lt;b&gt;1.8&lt;/b&gt;&lt;hr&gt;설정 저장 · 복원" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="730" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" value="&lt;b&gt;D5&lt;/b&gt; | 음성 캐시 (메모리)" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="145" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" value="&lt;b&gt;D4&lt;/b&gt; | localStorage 설정" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="740" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n46" value="&lt;b&gt;범례 (Legend)&lt;/b&gt;" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9aa0a6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1085" width="1720" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="n47" value="외부 엔티티" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1119" width="110" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n48" value="프로세스" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;verticalAlign=top;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1119" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n49" value="데이터 저장소" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1119" width="130" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n51" value="&lt;font color=&quot;#1a73e8&quot;&gt;&lt;b&gt;HTTPS&lt;/b&gt;&lt;/font&gt; — HTTPS (웹 · 채팅)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1155" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n53" value="&lt;font color=&quot;#188038&quot;&gt;&lt;b&gt;Git/HTTPS&lt;/b&gt;&lt;/font&gt; — Git over HTTPS (push)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1155" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n55" value="&lt;font color=&quot;#e8710a&quot;&gt;&lt;b&gt;키보드(HID)&lt;/b&gt;&lt;/font&gt; — 키보드 입력 (USB HID → keydown)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1185" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n57" value="&lt;font color=&quot;#00897b&quot;&gt;&lt;b&gt;화면(DOM)&lt;/b&gt;&lt;/font&gt; — 화면 렌더링 (DOM/CSS)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1185" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n59" value="&lt;font color=&quot;#9334e6&quot;&gt;&lt;b&gt;오디오(스피커)&lt;/b&gt;&lt;/font&gt; — 오디오 출력 (HTMLAudio → 스피커)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1215" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n61" value="&lt;font color=&quot;#5f6368&quot;&gt;&lt;b&gt;파일 I/O·CLI&lt;/b&gt;&lt;/font&gt; — 로컬 파일 I/O · CLI/함수 호출" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1215" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n63" value="&lt;font color=&quot;#8d6e63&quot;&gt;&lt;b&gt;메모리&lt;/b&gt;&lt;/font&gt; — 메모리 접근 (Blob/Audio 객체)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1245" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n65" value="&lt;font color=&quot;#c5221f&quot;&gt;&lt;b&gt;localStorage&lt;/b&gt;&lt;/font&gt; — Web Storage API (localStorage)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1245" width="730" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n66" value="화살표 머리(▶)가 가리키는 쪽이 &lt;b&gt;데이터가 흐르는 방향&lt;/b&gt;이에요. 색·선 모양은 &lt;b&gt;프로토콜/인터페이스&lt;/b&gt;를 뜻해요." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1277" width="1680" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;단어장 사진 · 단원" edge="1" parent="1" source="n5" target="n8" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.0000;exitY=0.1667;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.2778;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="190" />
+              <mxPoint x="220" y="125" />
+            </Array>
+            <mxPoint x="-5" y="-40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="&lt;b&gt;[CLI]&lt;/b&gt; TSV" edge="1" parent="1" source="n8" target="n9" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;쓰기 · 단원별 병합" edge="1" parent="1" source="n9" target="n13" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;읽기 · 음성 없는 단어" edge="1" parent="1" source="n14" target="n10" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.1333;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;쓰기 · MP3 + 길이(d)" edge="1" parent="1" source="n10" target="n15" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=1.0000;exitY=0.7778;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;읽기 · 전체 단어" edge="1" parent="1" source="n16" target="n11" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.1889;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;쓰기 · .xlsx" edge="1" parent="1" source="n11" target="n17" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=1.0000;exitY=0.7778;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5556;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;엑셀 단어장 · 결과 보고" edge="1" parent="1" source="n11" target="n5" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.0000;exitY=0.5556;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="600" />
+            </Array>
+            <mxPoint x="-20" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;읽기 · git add" edge="1" parent="1" source="n13" target="n12" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=1.0000;exitY=0.2500;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.3333;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="280" />
+              <mxPoint x="920" y="730" />
+            </Array>
+            <mxPoint x="-210" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e32" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;읽기 · git add" edge="1" parent="1" source="n15" target="n12" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.6667;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="470" />
+              <mxPoint x="900" y="760" />
+            </Array>
+            <mxPoint x="-190" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" value="&lt;b&gt;[Git/HTTPS]&lt;/b&gt;&lt;br&gt;git push (코드 · JSON · MP3)" edge="1" parent="1" source="n12" target="n7" style="endArrow=block;endFill=1;html=1;strokeColor=#188038;strokeWidth=2;fontColor=#188038;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;HTTPS GET · index.html · words.json · manifest · mp3" edge="1" parent="1" source="n7" target="n18" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="1005" />
+              <mxPoint x="990" y="175" />
+            </Array>
+            <mxPoint x="-170" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;Blob" edge="1" parent="1" source="n18" target="n21" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;단어 목록 · 목소리 정보" edge="1" parent="1" source="n18" target="n19" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.2727;entryY=0.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-70" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;읽기 · 캐시된 음성" edge="1" parent="1" source="n21" target="n19" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.8636;entryY=0.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-10" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;설정값(목표 타수 등)" edge="1" parent="1" source="n20" target="n19" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;exitX=0.2727;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.2727;entryY=1.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-75" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;변경된 설정" edge="1" parent="1" source="n19" target="n20" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;exitX=0.6818;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.6818;entryY=0.0000;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="0" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" value="&lt;b&gt;[localStorage]&lt;/b&gt;&lt;br&gt;쓰기" edge="1" parent="1" source="n20" target="n22" style="endArrow=block;endFill=1;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;exitX=1.0000;exitY=0.3750;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3333;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" value="&lt;b&gt;[localStorage]&lt;/b&gt;&lt;br&gt;읽기" edge="1" parent="1" source="n22" target="n20" style="endArrow=block;endFill=1;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;exitX=0.0000;exitY=0.8333;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.7500;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e43" value="&lt;b&gt;[키보드(HID)]&lt;/b&gt;&lt;br&gt;타이핑 · 단축키 · 설정 조작" edge="1" parent="1" source="n6" target="n19" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.0000;exitY=0.1842;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.2273;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" value="&lt;b&gt;[화면(DOM)]&lt;/b&gt;&lt;br&gt;단어 · 뜻 · 키 안내 · 통계" edge="1" parent="1" source="n19" target="n6" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.0000;exitY=0.6364;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.4211;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45" value="&lt;b&gt;[오디오(스피커)]&lt;/b&gt;&lt;br&gt;원어민 발음 1회" edge="1" parent="1" source="n19" target="n6" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;exitX=1.0000;exitY=0.8636;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.7105;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1167" as="sourcePoint" />
+            <mxPoint x="130" y="1167" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e52" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#188038;strokeWidth=2;fontColor=#188038;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="1167" as="sourcePoint" />
+            <mxPoint x="990" y="1167" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e54" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1197" as="sourcePoint" />
+            <mxPoint x="130" y="1197" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e56" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="1197" as="sourcePoint" />
+            <mxPoint x="990" y="1197" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e58" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1227" as="sourcePoint" />
+            <mxPoint x="130" y="1227" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e60" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="1227" as="sourcePoint" />
+            <mxPoint x="990" y="1227" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e62" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1257" as="sourcePoint" />
+            <mxPoint x="130" y="1257" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e64" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="1257" as="sourcePoint" />
+            <mxPoint x="990" y="1257" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. 시퀀스 — 단어 추가(제작)" id="pg_55400081">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1220" pageHeight="1330" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;font style='font-size:16px'&gt;&lt;b&gt;시퀀스 다이어그램 — 단어장 사진 → 앱 반영 (제작 흐름)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="5" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="운영자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="130" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="Claude&lt;br&gt;(에이전트)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="50" width="150" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" value="도구 스크립트&lt;br&gt;add_words · gen_kokoro&lt;br&gt;make_wordbook" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="50" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" value="Kokoro TTS + ffmpeg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="50" width="170" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" value="로컬 Git&lt;br&gt;(작업 저장소)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="50" width="150" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" value="GitHub&lt;br&gt;저장소 / Pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="50" width="150" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" value="&lt;b&gt;범례 (Legend)&lt;/b&gt;" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9aa0a6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1140" width="1180" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" value="동기 호출  ───▶" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1174" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" value="응답/반환  ‒ ‒ ▷ (점선 + 열린 화살표)" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1174" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" value="자기 호출  ↺" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1174" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" value="&lt;font color=&quot;#1a73e8&quot;&gt;&lt;b&gt;HTTPS&lt;/b&gt;&lt;/font&gt; — HTTPS (웹 · 채팅)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1210" width="460" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" value="&lt;font color=&quot;#188038&quot;&gt;&lt;b&gt;Git/HTTPS&lt;/b&gt;&lt;/font&gt; — Git over HTTPS (push)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1210" width="460" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" value="&lt;font color=&quot;#5f6368&quot;&gt;&lt;b&gt;파일 I/O·CLI&lt;/b&gt;&lt;/font&gt; — 로컬 파일 I/O · CLI/함수 호출" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1240" width="460" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" value="화살표 머리(▶)가 가리키는 쪽이 &lt;b&gt;데이터가 흐르는 방향&lt;/b&gt;이에요. 색·선 모양은 &lt;b&gt;프로토콜/인터페이스&lt;/b&gt;를 뜻해요." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1272" width="1140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="106" as="sourcePoint" />
+            <mxPoint x="105" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="106" as="sourcePoint" />
+            <mxPoint x="285" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="106" as="sourcePoint" />
+            <mxPoint x="495" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="106" as="sourcePoint" />
+            <mxPoint x="715" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="915" y="106" as="sourcePoint" />
+            <mxPoint x="915" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1105" y="106" as="sourcePoint" />
+            <mxPoint x="1105" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;① 단어장 사진 업로드 · 단원 번호" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="150" as="sourcePoint" />
+            <mxPoint x="285" y="150" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="② 사진 판독 → TSV&lt;br&gt;(번호·단어·품사·발음·뜻·예시)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="212" as="sourcePoint" />
+            <mxPoint x="285" y="246" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="355" y="212" />
+              <mxPoint x="355" y="246" />
+            </Array>
+            <mxPoint x="130" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;③ add_words.py --unit N (TSV)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="290" as="sourcePoint" />
+            <mxPoint x="495" y="290" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;④ 검증 결과 · words.json 병합 · 음성 없는 단어" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="352" as="sourcePoint" />
+            <mxPoint x="285" y="352" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑤ gen_kokoro.py heart michael" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="414" as="sourcePoint" />
+            <mxPoint x="495" y="414" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑥ 단어마다 합성 요청 (sid · speed)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="476" as="sourcePoint" />
+            <mxPoint x="715" y="476" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑦ wav → 무음 제거 → MP3 48kbps" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="538" as="sourcePoint" />
+            <mxPoint x="495" y="538" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑧ data/audio/*.mp3 · manifest.json 갱신" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="495" y="600" as="sourcePoint" />
+            <mxPoint x="285" y="600" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑨ make_wordbook.py → 엑셀 단어장" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="662" as="sourcePoint" />
+            <mxPoint x="495" y="662" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑩ test_app.py (헤드리스 브라우저 검증)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="724" as="sourcePoint" />
+            <mxPoint x="495" y="724" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="&lt;b&gt;[파일 I/O·CLI]&lt;/b&gt;&lt;br&gt;⑪ git add · commit" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="790" as="sourcePoint" />
+            <mxPoint x="915" y="790" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="&lt;b&gt;[Git/HTTPS]&lt;/b&gt;&lt;br&gt;⑫ git push origin main" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#188038;strokeWidth=2;fontColor=#188038;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="915" y="852" as="sourcePoint" />
+            <mxPoint x="1105" y="852" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="⑬ Pages 빌드 · 배포&lt;br&gt;(약 1~2분)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1105" y="914" as="sourcePoint" />
+            <mxPoint x="1105" y="948" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1175" y="914" />
+              <mxPoint x="1175" y="948" />
+            </Array>
+            <mxPoint x="130" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;⑭ 엑셀 단어장 + 완료 보고 (앱은 새로고침으로 반영)" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="992" as="sourcePoint" />
+            <mxPoint x="105" y="992" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1222" as="sourcePoint" />
+            <mxPoint x="130" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#188038;strokeWidth=2;fontColor=#188038;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="1222" as="sourcePoint" />
+            <mxPoint x="720" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#5f6368;strokeWidth=2;fontColor=#5f6368;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1252" as="sourcePoint" />
+            <mxPoint x="130" y="1252" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. 시퀀스 — 학습 실행" id="pg_94861519">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" value="&lt;font style='font-size:16px'&gt;&lt;b&gt;시퀀스 다이어그램 — 타자 연습 실행 (로딩 → 발음 → 입력 → 다음 단어)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="5" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="학습자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="120" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="앱 (index.html)&lt;br&gt;브라우저" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="50" width="170" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" value="GitHub Pages&lt;br&gt;(정적 호스팅)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="50" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" value="음성 캐시&lt;br&gt;(메모리 Blob/Audio)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="50" width="170" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" value="localStorage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="50" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" value="loop [단어 반복]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#9aa0a6;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontSize=11;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="30" y="850" width="980" height="488" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" value="&lt;b&gt;범례 (Legend)&lt;/b&gt;" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9aa0a6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1610" width="960" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" value="동기 호출  ───▶" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1644" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" value="응답/반환  ‒ ‒ ▷ (점선 + 열린 화살표)" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1644" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" value="자기 호출  ↺" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1644" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" value="&lt;font color=&quot;#1a73e8&quot;&gt;&lt;b&gt;HTTPS&lt;/b&gt;&lt;/font&gt; — HTTPS (웹 · 채팅)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1680" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" value="&lt;font color=&quot;#e8710a&quot;&gt;&lt;b&gt;키보드(HID)&lt;/b&gt;&lt;/font&gt; — 키보드 입력 (USB HID → keydown)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1680" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" value="&lt;font color=&quot;#00897b&quot;&gt;&lt;b&gt;화면(DOM)&lt;/b&gt;&lt;/font&gt; — 화면 렌더링 (DOM/CSS)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1710" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n47" value="&lt;font color=&quot;#9334e6&quot;&gt;&lt;b&gt;오디오(스피커)&lt;/b&gt;&lt;/font&gt; — 오디오 출력 (HTMLAudio → 스피커)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1710" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n49" value="&lt;font color=&quot;#8d6e63&quot;&gt;&lt;b&gt;메모리&lt;/b&gt;&lt;/font&gt; — 메모리 접근 (Blob/Audio 객체)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1740" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n51" value="&lt;font color=&quot;#c5221f&quot;&gt;&lt;b&gt;localStorage&lt;/b&gt;&lt;/font&gt; — Web Storage API (localStorage)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1740" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="n52" value="화살표 머리(▶)가 가리키는 쪽이 &lt;b&gt;데이터가 흐르는 방향&lt;/b&gt;이에요. 색·선 모양은 &lt;b&gt;프로토콜/인터페이스&lt;/b&gt;를 뜻해요." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1772" width="920" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="106" as="sourcePoint" />
+            <mxPoint x="100" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="106" as="sourcePoint" />
+            <mxPoint x="285" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="106" as="sourcePoint" />
+            <mxPoint x="490" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="106" as="sourcePoint" />
+            <mxPoint x="695" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#9aa0a6;strokeWidth=1;dashed=1;dashPattern=6 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="890" y="106" as="sourcePoint" />
+            <mxPoint x="890" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;① URL 접속 (페이지 열기)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="150" as="sourcePoint" />
+            <mxPoint x="285" y="150" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;② GET index.html" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="212" as="sourcePoint" />
+            <mxPoint x="490" y="212" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;200 · HTML/JS" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="274" as="sourcePoint" />
+            <mxPoint x="285" y="274" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;③ GET data/words.json · audio/manifest.json (no-cache)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="336" as="sourcePoint" />
+            <mxPoint x="490" y="336" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;200 · JSON (단어 · 목소리 목록)" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="398" as="sourcePoint" />
+            <mxPoint x="285" y="398" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="&lt;b&gt;[localStorage]&lt;/b&gt;&lt;br&gt;④ getItem(설정)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="460" as="sourcePoint" />
+            <mxPoint x="890" y="460" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="&lt;b&gt;[localStorage]&lt;/b&gt;&lt;br&gt;저장된 설정 (없으면 기본값)" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="890" y="522" as="sourcePoint" />
+            <mxPoint x="285" y="522" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="&lt;b&gt;[키보드(HID)]&lt;/b&gt;&lt;br&gt;⑤ Enter (연습 시작)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="584" as="sourcePoint" />
+            <mxPoint x="285" y="584" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;⑥ GET 현재 + 다음 N개 mp3 (병렬 · N=미리 로딩)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="646" as="sourcePoint" />
+            <mxPoint x="490" y="646" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;200 · audio/mpeg" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=8 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="708" as="sourcePoint" />
+            <mxPoint x="285" y="708" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;⑦ Blob URL로 보관 (Audio 객체)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="770" as="sourcePoint" />
+            <mxPoint x="695" y="770" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="&lt;b&gt;[오디오(스피커)]&lt;/b&gt;&lt;br&gt;⑧ 새 단어 표시 + 원어민 발음 1회 (playbackRate 자동 계산)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="832" as="sourcePoint" />
+            <mxPoint x="100" y="832" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="&lt;b&gt;[키보드(HID)]&lt;/b&gt;&lt;br&gt;⑨ 첫 글자 입력 → 타수 측정 시작" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="902" as="sourcePoint" />
+            <mxPoint x="285" y="902" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="⑩ 입력 판정 · 다음 키 표시&lt;br&gt;· 타수 = (타수−1)/시간" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="964" as="sourcePoint" />
+            <mxPoint x="285" y="998" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="355" y="964" />
+              <mxPoint x="355" y="998" />
+            </Array>
+            <mxPoint x="130" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="&lt;b&gt;[키보드(HID)]&lt;/b&gt;&lt;br&gt;⑪ 마지막 글자 입력 (단어 완료)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="1048" as="sourcePoint" />
+            <mxPoint x="285" y="1048" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;⑫ 다음 단어 음성 조회 + 미리 로딩 보충" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1110" as="sourcePoint" />
+            <mxPoint x="695" y="1110" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" value="&lt;b&gt;[메모리]&lt;/b&gt;&lt;br&gt;Audio 객체 (이미 준비된 경우 즉시)" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="1172" as="sourcePoint" />
+            <mxPoint x="285" y="1172" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" value="&lt;b&gt;[HTTPS]&lt;/b&gt;&lt;br&gt;(캐시에 없을 때만) GET mp3" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1234" as="sourcePoint" />
+            <mxPoint x="490" y="1234" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" value="&lt;b&gt;[오디오(스피커)]&lt;/b&gt;&lt;br&gt;⑬ 다음 단어 + 발음 1회" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1296" as="sourcePoint" />
+            <mxPoint x="100" y="1296" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" value="&lt;b&gt;[키보드(HID)]&lt;/b&gt;&lt;br&gt;⑭ 설정 변경 (목표 타수 · 목소리 · 여유 비율 …)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="1368" as="sourcePoint" />
+            <mxPoint x="285" y="1368" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" value="&lt;b&gt;[localStorage]&lt;/b&gt;&lt;br&gt;setItem(설정)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1430" as="sourcePoint" />
+            <mxPoint x="890" y="1430" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" value="&lt;b&gt;[화면(DOM)]&lt;/b&gt;&lt;br&gt;⑮ 결과 화면 (평균/최고 타수 · 정확도 · 발음 늦게 끝난 횟수)" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1492" as="sourcePoint" />
+            <mxPoint x="100" y="1492" as="targetPoint" />
+            <mxPoint x="0" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#1a73e8;strokeWidth=2;fontColor=#1a73e8;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1692" as="sourcePoint" />
+            <mxPoint x="130" y="1692" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#e8710a;strokeWidth=2;fontColor=#e8710a;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="1692" as="sourcePoint" />
+            <mxPoint x="610" y="1692" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#00897b;strokeWidth=2;fontColor=#00897b;fontSize=11;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1722" as="sourcePoint" />
+            <mxPoint x="130" y="1722" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e46" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#9334e6;strokeWidth=2;fontColor=#9334e6;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=1 3;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="1722" as="sourcePoint" />
+            <mxPoint x="610" y="1722" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e48" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#8d6e63;strokeWidth=2;fontColor=#8d6e63;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=2 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="1752" as="sourcePoint" />
+            <mxPoint x="130" y="1752" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50" value="" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#c5221f;strokeWidth=2;fontColor=#c5221f;fontSize=11;labelBackgroundColor=#ffffff;dashed=1;dashPattern=4 2 1 2;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="1752" as="sourcePoint" />
+            <mxPoint x="610" y="1752" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
